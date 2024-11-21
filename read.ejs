@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/hs.css">
+    <title>Document</title>
+</head>
+<body>
+    <a class="gh" href="/">Go Home</a><br><br>
+    <h1>ALL USERS</h1>
+    <div class="run">
+        <% users.forEach(function(e) { %>
+                 <div class="sq">
+                 <img src="<%= e.image %>" alt="<%= e.name %>'s image" />
+                <h1><%= e.name %></h1>
+                <h3><%= e.email %></h3>
+                <a href="/delete/<%= e._id %>">Delete User</a>
+            </div>
+        <% }) %>
+    
+     
+    </div>
+</body>
+</html>
